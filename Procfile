@@ -1,1 +1,1 @@
-web: grafana-server
+web: grafana server
