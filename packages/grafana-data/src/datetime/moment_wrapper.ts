@@ -1,4 +1,4 @@
-import moment, { Moment, MomentInput, DurationInputArg1, DurationInputArg2 } from 'moment';
+import moment, { Moment, MomentInput, DurationInputArg1, DurationInputArg2 } from 'moment-timezone';
 
 import { TimeZone } from '../types/time';
 /* eslint-disable id-blacklist, no-restricted-imports, @typescript-eslint/ban-types */
