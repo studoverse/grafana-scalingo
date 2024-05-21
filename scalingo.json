@@ -17,7 +17,7 @@
     },
     "GF_DATABASE_URL": {
       "description": "Alias to the database connection string",
-      "value": "$SCALINGO_POSTGRESQL_URL",
+      "value": "",
       "required": true
     },
     "GF_SECURITY_ADMIN_PASSWORD": {
