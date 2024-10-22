@@ -31,6 +31,7 @@ labels:
     - oss
 menuTitle: Sharing
 title: Share dashboards and panels
+description: Share Grafana dashboards and panels within your organization and publicly
 weight: 85
 ---
 
@@ -63,7 +64,7 @@ If you change a dashboard, ensure that you save the changes before sharing.
 
 1. Click **Dashboards** in the left-side menu.
 1. Click the dashboard you want to share.
-1. Click the share icon at the top of the screen.
+1. Click the **Share** button at the top right of the screen.
 
    The share dialog opens and shows the Link tab.
 
@@ -90,11 +91,38 @@ You can publish snapshots to your local instance or to [snapshots.raintank.io](h
 
 1. Copy the snapshot link, and share it either within your organization or publicly on the web.
 
-If you created a snapshot by mistake, click **Delete snapshot** to remove the snapshot from your Grafana instance.
+If you created a snapshot by mistake, click **Delete snapshot** in the dialog box to remove the snapshot from your Grafana instance.
 
-### Dashboard export
+#### Delete a snapshot
 
-Grafana dashboards can easily be exported and imported. For more information, refer to [Export and import dashboards][].
+To delete existing snapshots, follow these steps:
+
+1. In the primary menu, click **Dashboards**.
+1. Click **Snapshots** to go to the snapshots management page.
+1. Click the red **x** next to the snapshot URL that you want to delete.
+
+The snapshot is immediately deleted. You may need to clear your browser cache or use a private or incognito browser to confirm this.
+
+### Export a dashboard as JSON
+
+The dashboard export action creates a Grafana JSON file that contains everything you need, including layout, variables, styles, data sources, queries, and so on, so that you can later import the dashboard.
+
+1. Click **Dashboards** in the main menu.
+1. Open the dashboard you want to export.
+1. Click the **Share** icon in the top navigation bar.
+1. Click **Export**.
+
+   If you're exporting the dashboard to use in another instance, with different data source UIDs, enable the **Export for sharing externally** switch.
+
+1. Click **Save to file**.
+
+Grafana downloads a JSON file to your local machine.
+
+#### Make a dashboard portable
+
+If you want to export a dashboard for others to use, you can add template variables for things like a metric prefix (use a constant variable) and server name.
+
+A template variable of the type `Constant` is automatically hidden in the dashboard, and is also added as a required input when the dashboard is imported.
 
 ## Export dashboard as PDF
 
@@ -104,7 +132,7 @@ You can generate and save PDF files of any dashboard.
 
 1. Click **Dashboards** in the left-side menu.
 1. Click the dashboard you want to share.
-1. Click the share icon at the top of the screen.
+1. Click the **Share** button at the top right of the screen.
 1. On the PDF tab, select a layout option for the exported dashboard: **Portrait** or **Landscape**.
 1. Click **Save as PDF** to render the dashboard as a PDF file.
 
@@ -159,7 +187,17 @@ You can publish snapshots to your local instance or to [snapshots.raintank.io](h
 
 1. Copy the snapshot link, and share it either within your organization or publicly on the web.
 
-If you created a snapshot by mistake, click **Delete snapshot** to remove the snapshot from your Grafana instance.
+If you created a snapshot by mistake, click **Delete snapshot** in the dialog box to remove the snapshot from your Grafana instance.
+
+#### Delete a snapshot
+
+To delete existing snapshots, follow these steps:
+
+1. In the primary menu, click **Dashboards**.
+1. Click **Snapshots** to go to the snapshots management page.
+1. Click the red **x** next to the snapshot URL that you want to delete.
+
+The snapshot is immediately deleted. You may need to clear your browser cache or use a private or incognito browser to confirm this.
 
 ### Embed panel
 
@@ -191,9 +229,6 @@ To create a library panel from the **Share Panel** dialog:
 1. Save the dashboard.
 
 {{% docs/reference %}}
-[Export and import dashboards]: "/docs/grafana/ -> /docs/grafana/<GRAFANA VERSION>/dashboards/manage-dashboards#export-and-import-dashboards"
-[Export and import dashboards]: "/docs/grafana-cloud/ -> /docs/grafana/<GRAFANA VERSION>/dashboards/manage-dashboards#export-and-import-dashboards"
-
 [Grafana Enterprise]: "/docs/grafana/ -> /docs/grafana/<GRAFANA VERSION>/introduction/grafana-enterprise"
 [Grafana Enterprise]: "/docs/grafana-cloud/ -> /docs/grafana/<GRAFANA VERSION>/introduction/grafana-enterprise"
 

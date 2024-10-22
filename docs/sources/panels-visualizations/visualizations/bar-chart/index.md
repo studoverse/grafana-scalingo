@@ -2,7 +2,7 @@
 aliases:
   - ../../panels/visualizations/bar-chart/
   - ../../visualizations/bar-chart/
-description: Bar chart visualization
+description: Configure options for Grafana's bar chart visualization
 keywords:
   - grafana
   - docs
@@ -23,6 +23,8 @@ weight: 100
 Bar charts allow you to graph categorical data.
 
 {{< figure src="/static/img/docs/bar-chart-panel/barchart_small_example.png" max-width="1000px" caption="Bar chart" >}}
+
+{{< docs/play title="Grafana Bar Charts and Pie Charts" url="https://play.grafana.org/d/ktMs4D6Mk/" >}}
 
 ## Supported data formats
 

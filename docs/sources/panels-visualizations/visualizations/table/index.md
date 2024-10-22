@@ -6,7 +6,7 @@ aliases:
   - ../../visualizations/table/
   - ../../visualizations/table/filter-table-columns/
   - /docs/grafana/next/panels/visualizations/table/table-field-options/
-description: Learn about table panel visualization features.
+description: Configure options for Grafana's table visualization
 keywords:
   - grafana
   - dashboard
@@ -30,6 +30,12 @@ weight: 100
 Tables are very flexible, supporting multiple modes for time series and for tables, annotation, and raw JSON data. This visualization also provides date formatting, value formatting, and coloring options.
 
 {{< figure src="/static/img/docs/tables/table_visualization.png" max-width="1200px" lightbox="true" caption="Table visualization" >}}
+
+The following video provides a visual walkthrough of the options you can set in a table visualization. If you want to see a configuration in action, check out the video:
+
+{{< youtube id="PCY7O8EJeJY" >}}
+
+{{< docs/play title="Table Visualizations in Grafana" url="https://play.grafana.org/d/OhR1ID6Mk/" >}}
 
 ## Annotation and alert support
 
@@ -132,6 +138,10 @@ Additionally, labels displayed alongside of the gauges can be set to be colored 
 
 {{< figure src="/static/img/docs/tables/hidden-mode.png" max-width="500px" caption="Hide Label" class="docs-image--no-shadow" >}}
 
+### Data links
+
+If you've configured data links, when the cell type is **Auto** mode, the cell text becomes clickable. If you change the cell type to **Data links**, the cell text reflects the titles of the configured data links. To control the application of data link text more granularly use a **Cell option > Cell type > Data links** field override.
+
 ### JSON view
 
 Shows value formatted as code. If a value is an object the JSON view allowing browsing the JSON object will appear on hover.
@@ -190,6 +200,14 @@ To filter column values, click the filter (funnel) icon next to a column title. 
 {{< figure src="/static/img/docs/tables/filter-column-values.png" max-width="500px" caption="Filter column values" class="docs-image--no-shadow" >}}
 
 Click the check box next to the values that you want to display. Enter text in the search field at the top to show those values in the display so that you can select them rather than scroll to find them.
+
+Choose from several operators to display column values:
+
+- **Contains** - Matches a regex pattern (operator by default).
+- **Expression** - Evaluates a boolean expression. The character `$` represents the column value in the expression (for example, "$ >= 10 && $ <= 12").
+- The typical comparison operators: `=`, `!=`, `<`, `<=`, `>`, `>=`.
+
+Click the check box above the **Ok** and **Cancel** buttons to add or remove all displayed values to/from the filter.
 
 ### Clear column filters
 
